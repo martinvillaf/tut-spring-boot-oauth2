@@ -87,7 +87,7 @@ public class SocialApplication extends WebSecurityConfigurerAdapter {
 				facebook().getClientId());
 		tokenServices.setRestTemplate(facebookTemplate);
 		facebookFilter.setTokenServices(
-				new UserInfoTokenServices(facebookResource().getUserInfoUri(), facebook().getClientId()));
+				tokenServices);
 		return facebookFilter;
 	}
 
